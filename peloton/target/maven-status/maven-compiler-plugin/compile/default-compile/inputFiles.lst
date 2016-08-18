@@ -1,0 +1,16 @@
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\service\NewsService.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\controller\NewsController.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\domain\Page.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\parser\NewsParser.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\Application.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\parser\ParsingResources.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\utils\MyHtmlFormatter.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\utils\MyLogger.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\http\NewsHttp.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\domain\News.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\repositories\NewsRepository.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\scheduler\NewsScheduler.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\service\NewsServiceImpl.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\utils\Constants.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\DatabaseConfig.java
+F:\Work\Stuff\Peloton\peloton\src\main\java\com\drake1804\Tweakables.java

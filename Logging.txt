@@ -1,0 +1,6 @@
+Aug 18, 2016 8:47:24 PM com.drake1804.scheduler.NewsScheduler loadNews
+INFO: Loading initiate
+Aug 18, 2016 8:47:24 PM com.drake1804.http.NewsHttp loadPage
+INFO: Request to: www.f1news.ru
+Aug 18, 2016 8:47:25 PM com.drake1804.service.NewsServiceImpl addNews
+INFO: Added 11 news;

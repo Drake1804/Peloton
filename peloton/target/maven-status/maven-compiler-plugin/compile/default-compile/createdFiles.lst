@@ -1,0 +1,17 @@
+com\drake1804\http\NewsHttp.class
+com\drake1804\utils\MyHtmlFormatter.class
+com\drake1804\http\NewsHttp$1.class
+com\drake1804\utils\MyLogger.class
+com\drake1804\domain\Page.class
+com\drake1804\controller\NewsController.class
+com\drake1804\parser\ParsingResources.class
+com\drake1804\service\NewsService.class
+com\drake1804\domain\News.class
+com\drake1804\Application.class
+com\drake1804\utils\Constants.class
+com\drake1804\scheduler\NewsScheduler.class
+com\drake1804\parser\NewsParser.class
+com\drake1804\DatabaseConfig.class
+com\drake1804\service\NewsServiceImpl.class
+com\drake1804\Tweakables.class
+com\drake1804\repositories\NewsRepository.class
