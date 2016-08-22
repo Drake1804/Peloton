@@ -48,10 +48,6 @@ public class News implements Serializable {
         this.createdAt = createdAt;
     }
 
-    public long getId() {
-        return id;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -70,10 +66,6 @@ public class News implements Serializable {
 
     public Date getCreatedAt() {
         return createdAt;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public void setTitle(String title) {
@@ -104,6 +96,7 @@ public class News implements Serializable {
         News news = (News) o;
 
         if (id != news.id) return false;
+        if (views != news.views) return false;
         if (title != null ? !title.equals(news.title) : news.title != null) return false;
         if (description != null ? !description.equals(news.description) : news.description != null) return false;
         if (link != null ? !link.equals(news.link) : news.link != null) return false;
@@ -120,6 +113,7 @@ public class News implements Serializable {
         result = 31 * result + (link != null ? link.hashCode() : 0);
         result = 31 * result + (image != null ? image.hashCode() : 0);
         result = 31 * result + (createdAt != null ? createdAt.hashCode() : 0);
+        result = 31 * result + views;
         return result;
     }
 
@@ -131,7 +125,8 @@ public class News implements Serializable {
                 ", description='" + description + '\'' +
                 ", link='" + link + '\'' +
                 ", image='" + image + '\'' +
-                ", createdAt='" + createdAt + '\'' +
+                ", createdAt=" + createdAt +
+                ", views=" + views +
                 '}';
     }
 }

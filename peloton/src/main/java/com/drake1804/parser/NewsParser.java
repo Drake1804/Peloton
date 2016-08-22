@@ -1,5 +1,6 @@
 package com.drake1804.parser;
 
+import com.drake1804.Application;
 import com.drake1804.domain.News;
 import com.drake1804.domain.Page;
 import org.w3c.dom.Document;
@@ -18,6 +19,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 /**
  * Created by Pavel.Shkaran on 7/29/2016.
@@ -35,14 +37,17 @@ public class NewsParser {
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
+                    try {
+                        News news = new News(element.getElementsByTagName("title").item(0).getTextContent(),
+                                element.getElementsByTagName("description").item(0).getTextContent(),
+                                element.getElementsByTagName("link").item(0).getTextContent(),
+                                element.getElementsByTagName("enclosure").item(0).getAttributes().item(2).getTextContent(),
+                                formatter.parse(element.getElementsByTagName("pubDate").item(0).getTextContent()));
 
-                    News news = new News(element.getElementsByTagName("title").item(0).getTextContent(),
-                            element.getElementsByTagName("description").item(0).getTextContent(),
-                            element.getElementsByTagName("link").item(0).getTextContent(),
-                            element.getElementsByTagName("enclosure").item(0).getAttributes().item(2).getTextContent(),
-                            formatter.parse(element.getElementsByTagName("pubDate").item(0).getTextContent()));
-
-                    newsList.add(news);
+                        newsList.add(news);
+                    } catch (Exception e){
+                        Application.LOGGER.log(Level.INFO, e.getMessage());
+                    }
                 }
             }
         }

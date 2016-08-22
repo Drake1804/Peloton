@@ -10,6 +10,7 @@ import okhttp3.Response;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -51,8 +52,10 @@ public class NewsHttp {
         Response response = okHttpClient.newCall(request).execute();
         URL url = new URL(pageUrl);
         Application.LOGGER.log(Level.INFO, "Request to: "+url.getHost());
+        String tmp = response.body().string();
+        byte[] byteText = tmp.getBytes(Charset.forName("UTF-8"));
 
-        return new Page(response.body().string(), url.getHost());
+        return new Page(new String(byteText, "UTF-8"), url.getHost());
     }
 
 }
